@@ -1,0 +1,93 @@
+{
+  "draft": true,
+  "draftNote": "Draft assembled from public LinkedIn. ",
+  "source": "https://www.linkedin.com/in/naveenkandakumar",
+  "name": "Naveen Kandakumar",
+  "headline": "Senior Software Developer at Hyland",
+  "summary": "Senior software developer with a background in C#, Python, .NET, AWS. Experience includes Hyland Software, a CRM internship at Frontier Internet, and consulting for The Nielsen Company through Tata Consultancy Services.",
+  "contact": {
+    "website": "https://naveenk.dev",
+    "linkedin": "https://www.linkedin.com/in/naveenkandakumar",
+    "email": "hello@naveenk.dev"
+  },
+  "experience": [
+    {
+      "title": "Software Developer",
+      "company": "Hyland Software",
+      "location": "Westlake, Ohio",
+      "start": "August 2012",
+      "end": "Present",
+      "highlights": [
+        "Currently working on a Content Innovation Cloud (CIC) connector to integrate Workday with the CIC platform.",
+        "Works on enterprise application integration at Hyland Software, a software company focused on healthcare and document management solutions."
+      ]
+    },
+    {
+      "title": "CRM Intern",
+      "company": "Frontier Internet",
+      "location": "Rochester, New York",
+      "start": "June 2011",
+      "end": "August 2011",
+      "highlights": [
+        "Collaborated with a four-person team to maintain and upgrade Frontier’s customer-relationship management application built with JSPs and HTML.",
+        "Implemented UI and workflow updates that improved how support staff viewed and updated customer records in the CRM.",
+        "Designed and developed an internal Java Swing desktop tool backed by Oracle 10g to log team assignments, track progress, and report status.",
+        "Used the tracking app to give the team a shared view of ownership and completion across open CRM tasks."
+      ]
+    },
+    {
+      "title": "Assistant Systems Engineer",
+      "company": "Tata Consultancy Services",
+      "location": "Chennai, Tamil Nadu, India",
+      "start": "December 2009",
+      "end": "August 2010",
+      "highlights": [
+        "Worked as a TCS consultant assigned to The Nielsen Company on portal and reporting solutions.",
+        "Developed J2EE web applications that generated e-reports for Nielsen stakeholders.",
+        "Built a content repository with role-based permissions so users could only view authorized portlets.",
+        "Maintained and enhanced Vignette portal applications used by Nielsen teams for day-to-day content access.",
+        "Collaborated with on-site and offshore teammates to deliver fixes and feature updates for the client portal."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science, Computer Science",
+      "school": "Rochester Institute of Technology",
+      "start": "September 2010",
+      "end": "July 2012"
+    },
+    {
+      "degree": "Bachelor of Engineering, EEE (Sandwich)",
+      "school": "PSG College of Technology",
+      "start": "August 2004",
+      "end": "June 2009"
+    }
+  ],
+  "skills": [
+    "C#",
+    ".NET",
+    "SQL Server",
+    "HTML",
+    "CRM",
+    "Web applications",
+    "XML",
+    "JSON",
+    "REST",
+    "SOAP",
+    "WCF",
+    "Windows Forms",
+    "MVVM",
+    "MVC",
+    "Entity Framework",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "GitHub",
+    "Bitbucket",
+    "Jenkins",
+    "Azure DevOps",
+    "GitHub Actions",
+    "Python"
+  ]
+}

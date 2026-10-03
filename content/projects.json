@@ -1,0 +1,28 @@
+{
+  "draft": true,
+  "draftNote": "Sample project links that are not on the resume. Replace titles, descriptions, and URLs with your real work.",
+  "intro": "Projects and experiments beyond the roles listed on the resume.",
+  "projects": [
+    {
+      "slug": "sample-home-lab",
+      "title": "Sample: home lab notes",
+      "description": "Placeholder for a personal lab, homelab write-up, or infrastructure notes you want to share separately from the resume.",
+      "url": "https://example.com/your-home-lab",
+      "tags": ["sample", "replace-me"]
+    },
+    {
+      "slug": "sample-side-tool",
+      "title": "Sample: side tool",
+      "description": "Placeholder for a small utility, script, or app that is not listed as resume experience.",
+      "url": "https://example.com/your-side-tool",
+      "tags": ["sample", "replace-me"]
+    },
+    {
+      "slug": "sample-open-source",
+      "title": "Sample: open source notes",
+      "description": "Placeholder for a GitHub repo, contribution write-up, or demo you want linked from naveenk.dev/projects.",
+      "url": "https://github.com/navforu",
+      "tags": ["sample", "replace-me"]
+    }
+  ]
+}
