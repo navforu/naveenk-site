@@ -4,6 +4,13 @@
   "intro": "Projects and experiments beyond the roles listed on the resume.",
   "projects": [
     {
+      "slug": "mistfront",
+      "title": "Mistfront",
+      "description": "Static website for Mistfront, a weekend retreat in the foothills of the Western Ghats. It showcases the A-frame cabin, villa, and pool with an auto-generated photo gallery and an enquiry form that emails the owners. Deployed to GitHub Pages through CI that runs Node and Python test suites before every publish. Live at navforu.github.io/mistyfront.",
+      "url": "https://navforu.github.io/mistyfront/",
+      "tags": ["html", "css", "javascript", "python", "github-pages", "github-actions"]
+    },
+    {
       "slug": "sample-home-lab",
       "title": "Sample: home lab notes",
       "description": "Placeholder for a personal lab, homelab write-up, or infrastructure notes you want to share separately from the resume.",
