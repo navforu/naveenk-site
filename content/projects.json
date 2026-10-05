@@ -6,9 +6,16 @@
     {
       "slug": "mistfront",
       "title": "Mistfront",
-      "description": "Static website for Mistfront, a weekend retreat in the foothills of the Western Ghats. It showcases the A-frame cabin, villa, and pool with an auto-generated photo gallery and an enquiry form that emails the owners. Deployed to GitHub Pages through CI that runs Node and Python test suites before every publish. Live at navforu.github.io/mistyfront.",
+      "description": "Static website for Mistfront, a weekend retreat in the foothills of the Western Ghats. It showcases the A-frame cabin, villa, and pool with an auto-generated photo gallery and an enquiry form that emails the owners. Deployed to GitHub Pages through CI that runs Node and Python test suites before every publish.",
       "url": "https://navforu.github.io/mistyfront/",
       "tags": ["html", "css", "javascript", "python", "github-pages", "github-actions"]
+    },
+    {
+      "slug": "naveenk-dev",
+      "title": "naveenk.dev: private source, public site",
+      "description": "This website. Resume and project content lives as JSON in a private repo, with a draft folder that is never published. A Node build validates the content and pre-renders static HTML pages with Open Graph tags and a print-to-PDF resume. GitHub Actions runs the test suite on every push to main and, only if it passes, pushes the built site to a separate public repo over an SSH deploy key. GitHub Pages serves that public repo on the custom domain, so the site stays on the free plan without exposing drafts or source.",
+      "url": "https://github.com/navforu/naveenk-site",
+      "tags": ["javascript", "node", "github-actions", "github-pages", "static-site"]
     },
     {
       "slug": "sample-home-lab",
