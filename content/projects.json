@@ -12,7 +12,7 @@
     },
     {
       "slug": "naveenk-dev",
-      "title": "naveenk.dev: private source, public site",
+      "title": "naveenk.dev: private source - public site",
       "description": "This website. Resume and project content lives as JSON in a private repo, with a draft folder that is never published. A Node build validates the content and pre-renders static HTML pages with Open Graph tags and a print-to-PDF resume. GitHub Actions runs the test suite on every push to main and, only if it passes, pushes the built site to a separate public repo over an SSH deploy key. GitHub Pages serves that public repo on the custom domain, so the site stays on the free plan without exposing drafts or source.",
       "url": "https://github.com/navforu/naveenk-site",
       "tags": ["javascript", "node", "github-actions", "github-pages", "static-site"]
