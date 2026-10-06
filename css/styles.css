@@ -230,6 +230,10 @@ li + li {
   color: var(--muted);
 }
 
+.print-only {
+  display: none;
+}
+
 .error {
   color: #8b1e1e;
   background: #fdeeee;
@@ -250,6 +254,11 @@ li + li {
     font-size: 10.5pt;
   }
 
+  .print-only {
+    display: inline;
+  }
+
+  .screen-only,
   .site-nav,
   .draft-banner,
   .preview-banner,

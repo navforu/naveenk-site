@@ -80,9 +80,11 @@ function renderResume(data) {
     links.push(
       '<a href="' +
         escapeHtml(contact.website) +
-        '">' +
+        '"><span class="screen-only">' +
         escapeHtml(contact.website.replace(/^https?:\/\//, "")) +
-        "</a>"
+        '</span><span class="print-only">Website: ' +
+        escapeHtml(contact.website) +
+        "</span></a>"
     );
   }
   if (contact.linkedin) {
