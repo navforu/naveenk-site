@@ -238,10 +238,63 @@ function renderProjects(data, selectedSlug, options) {
   );
 }
 
-function renderPrivacyPolicy(data) {
+var PRIVACY_INDEX_INTRO =
+  "Privacy policies for apps I publish.";
+
+function privacyCard(policy, detailHref) {
+  var href = detailHref
+    ? detailHref(policy.slug)
+    : "privacy.html?policy=" + encodeURIComponent(policy.slug);
+  return (
+    '<article class="project">' +
+    '<div class="project-header">' +
+    "<h3><a href=\"" +
+    escapeHtml(href) +
+    '">' +
+    escapeHtml(policy.appName) +
+    "</a></h3>" +
+    "</div>" +
+    (policy.summary ? "<p>" + escapeHtml(policy.summary) + "</p>" : "") +
+    "</article>"
+  );
+}
+
+/**
+ * options.detailHref(slug): link from the list to one policy.
+ * options.intro: paragraph under the Privacy heading.
+ */
+function renderPrivacyIndex(policies, options) {
+  var opts = options || {};
+  var intro = opts.intro != null ? opts.intro : PRIVACY_INDEX_INTRO;
+  var detailHref = opts.detailHref;
+  var list = (policies || [])
+    .map(function (policy) {
+      return privacyCard(policy, detailHref);
+    })
+    .join("");
+  return (
+    '<article class="card">' +
+    "<h1>Privacy</h1>" +
+    (intro ? '<p class="intro">' + escapeHtml(intro) + "</p>" : "") +
+    list +
+    "</article>"
+  );
+}
+
+/**
+ * options.listHref: link back to the privacy list.
+ */
+function renderPrivacyPolicy(data, options) {
   if (!data || typeof data !== "object") {
     throw new Error("privacy policy data must be an object");
   }
+
+  var opts = options || {};
+  var backLink = opts.listHref
+    ? '<a class="back-link" href="' +
+      escapeHtml(opts.listHref) +
+      '">Back to privacy</a>'
+    : "";
 
   var sections = (data.sections || [])
     .map(function (section) {
@@ -282,6 +335,7 @@ function renderPrivacyPolicy(data) {
   return (
     draftBanner(data) +
     '<article class="card legal">' +
+    backLink +
     "<h1>" +
     escapeHtml(data.appName || "App") +
     " privacy policy</h1>" +
@@ -342,6 +396,8 @@ function contentUrls(fileName, options) {
     escapeHtml: escapeHtml,
     renderResume: renderResume,
     renderProjects: renderProjects,
+    renderPrivacyIndex: renderPrivacyIndex,
+    renderPrivacyPolicy: renderPrivacyPolicy,
     async renderResumePage(root) {
       try {
         var draftView = isDraftView(window.location.pathname, window.location.search);
@@ -363,6 +419,38 @@ function contentUrls(fileName, options) {
           : "Draft projects — Naveen Kandakumar";
       } catch (error) {
         showError(root, "Could not load projects.json.");
+        console.error(error);
+      }
+    },
+    async renderPrivacyPage(root) {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var draftView = isDraftView(window.location.pathname, window.location.search);
+        var files = ["privacy-tasky.json"];
+        var policies = [];
+        for (var i = 0; i < files.length; i += 1) {
+          policies.push(await fetchFirst(contentUrls(files[i], { draftView: draftView })));
+        }
+        var selected = params.get("policy");
+        if (selected) {
+          var match = policies.filter(function (policy) {
+            return policy.slug === selected;
+          })[0];
+          if (!match) {
+            root.innerHTML =
+              '<article class="card"><p class="error">No privacy policy found for "' +
+              escapeHtml(selected) +
+              '".</p><p><a class="back-link" href="privacy.html">Back to privacy</a></p></article>';
+            return;
+          }
+          root.innerHTML = renderPrivacyPolicy(match, { listHref: "privacy.html" });
+          document.title = match.title || match.appName + " privacy policy";
+          return;
+        }
+        root.innerHTML = renderPrivacyIndex(policies);
+        document.title = "Draft privacy — Naveen Kandakumar";
+      } catch (error) {
+        showError(root, "Could not load privacy policies.");
         console.error(error);
       }
     }
