@@ -1,0 +1,84 @@
+{
+  "draft": false,
+  "appName": "Tasky",
+  "slug": "tasky",
+  "title": "Privacy Policy — Tasky",
+  "summary": "Tasky keeps your challenge data on your device. There is no Tasky account, server, analytics, or ads.",
+  "updated": "7 October 2026",
+  "contactEmail": "hello@naveenk.dev",
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "Tasky is an Android app for tracking a personal daily habit challenge. This policy explains what data the app handles and where it goes.",
+        "Tasky is provided for educational purposes and individual use only. It is not a commercial product and is not health or medical advice."
+      ]
+    },
+    {
+      "heading": "Data stored on your device",
+      "paragraphs": [
+        "All challenge data stays on your phone unless you choose to export it or your device’s system backup includes it."
+      ],
+      "bullets": [
+        "Challenge settings (length, start day, mode, theme, reminder times, optional group invite link text)",
+        "Your list of daily tasks",
+        "Day-by-day completion progress",
+        "Optional backup files you create with Export (JSON you save yourself, for example to Downloads or Google Drive)"
+      ]
+    },
+    {
+      "heading": "What Tasky does not collect",
+      "paragraphs": [
+        "The developer does not operate a Tasky server that receives your challenge data."
+      ],
+      "bullets": [
+        "No Tasky account or sign-in",
+        "No analytics or advertising SDKs from the developer",
+        "No sale of personal data",
+        "No transmission of your tasks or progress to naveenk.dev or any Tasky backend"
+      ]
+    },
+    {
+      "heading": "Sharing",
+      "paragraphs": [
+        "When you use Message or Share, Tasky hands a short status string (for example “Day 12 ✅”) to another app you pick, such as WhatsApp or the system share sheet. After that, that app’s own privacy policy applies. Tasky does not upload the message to a Tasky service."
+      ]
+    },
+    {
+      "heading": "Notifications",
+      "paragraphs": [
+        "If you add reminder times, Tasky schedules local notifications on your device. Notification permission is optional and controlled by Android."
+      ]
+    },
+    {
+      "heading": "Android backup and device transfer",
+      "paragraphs": [
+        "Tasky allows Android Auto Backup and device-to-device transfer for app files that hold your settings and progress. Caches are not the focus of those rules. Whether backup runs depends on your Google account and device settings. The developer does not receive a copy of those backups."
+      ]
+    },
+    {
+      "heading": "Export and import",
+      "paragraphs": [
+        "Export writes a backup file you choose a location for. Import reads a file you select and replaces the challenge data on that phone. Keep backup files somewhere you trust; anyone with the file can read your task list and progress."
+      ]
+    },
+    {
+      "heading": "Children",
+      "paragraphs": [
+        "Tasky is not directed at children under 13. Do not use the app to collect information from children."
+      ]
+    },
+    {
+      "heading": "Changes",
+      "paragraphs": [
+        "This policy may be updated when the app’s data practices change. The “Last updated” date at the top of this page will change when that happens."
+      ]
+    },
+    {
+      "heading": "Contact",
+      "paragraphs": [
+        "Questions about this policy: hello@naveenk.dev"
+      ]
+    }
+  ]
+}

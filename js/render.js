@@ -238,6 +238,63 @@ function renderProjects(data, selectedSlug, options) {
   );
 }
 
+function renderPrivacyPolicy(data) {
+  if (!data || typeof data !== "object") {
+    throw new Error("privacy policy data must be an object");
+  }
+
+  var sections = (data.sections || [])
+    .map(function (section) {
+      var paragraphs = (section.paragraphs || [])
+        .map(function (text) {
+          return "<p>" + escapeHtml(text) + "</p>";
+        })
+        .join("");
+      var bullets = section.bullets
+        ? "<ul>" +
+          section.bullets
+            .map(function (item) {
+              return "<li>" + escapeHtml(item) + "</li>";
+            })
+            .join("") +
+          "</ul>"
+        : "";
+      return (
+        "<section>" +
+        "<h2>" +
+        escapeHtml(section.heading) +
+        "</h2>" +
+        paragraphs +
+        bullets +
+        "</section>"
+      );
+    })
+    .join("");
+
+  var contact = data.contactEmail
+    ? '<p class="contact"><a href="mailto:' +
+      escapeHtml(data.contactEmail) +
+      '">' +
+      escapeHtml(data.contactEmail) +
+      "</a></p>"
+    : "";
+
+  return (
+    draftBanner(data) +
+    '<article class="card legal">' +
+    "<h1>" +
+    escapeHtml(data.appName || "App") +
+    " privacy policy</h1>" +
+    (data.updated
+      ? '<p class="meta">Last updated: ' + escapeHtml(data.updated) + "</p>"
+      : "") +
+    (data.summary ? '<p class="summary">' + escapeHtml(data.summary) + "</p>" : "") +
+    sections +
+    contact +
+    "</article>"
+  );
+}
+
 function isDraftView(pathname, search) {
   var params = new URLSearchParams(search || "");
   var path = String(pathname || "").replace(/\\/g, "/");

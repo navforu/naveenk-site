@@ -160,6 +160,18 @@ h2 {
   font-size: 0.92rem;
 }
 
+.legal .summary {
+  margin: 12px 0 0;
+}
+
+.legal section {
+  margin-top: 8px;
+}
+
+.legal .contact {
+  margin-top: 28px;
+}
+
 ul {
   margin: 8px 0 0;
   padding-left: 18px;
